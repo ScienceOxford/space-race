@@ -1,7 +1,7 @@
 # space-race
 Files for the 2h Online Creative Computing Club, 'Space Race'
 
-Visit here for the instructions: <https://scienceoxford.github.io/space-race>
+Visit here for the instructions: <https://scienceoxford.github.io/space-race/>
 
 *Developed by [ScienceOxford](https://scienceoxford.com) for educational purposes. Please give credit where applicable.
 <br>We love seeing what you've created, so tag us when you share! [@ScienceOxford](https://twitter.com/scienceoxford)*
