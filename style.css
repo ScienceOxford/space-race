@@ -73,6 +73,10 @@ code {
   background-color: rgb(196, 214, 0);
 }
 
+.bg_blue a {
+  background-color: rgb(0, 133, 202);
+}
+
 .links a {
   color: rgb(34, 35, 34);
   font-size: 24px;
