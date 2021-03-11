@@ -67,14 +67,15 @@
 
   <div id="quiz-responses" class="left">
     <h3>Inputting Answers</h3>
-    <p>We are going to use a new Trinket for this next part so, before moving on, <strong>save your code from before</strong>, especially if you added some extra quiz questions!</p>
-    <p>Run this code buy clicking the <strong>></strong> button on the top.</p>
-    <iframe src="https://trinket.io/embed/python3/e9683bad55?showInstructions=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-    <p><em>You can access this directly on the Trinket website by <a href="https://trinket.io/python3/e9683bad55" target="_blank">clicking here</a>.</em></p>
+    <p>Instead of putting all the questions on the screen at once, we can tell the program to print the first one, then wait for user input.</p>
+    <p>Click on <strong>line 10</strong>, after <code>print(question)</code>, and add the following code:</p>
+    <pre>response = input("What is the answer?")</pre>
+    <br>
     <p class=debugging><strong>Test this code - what happens when you type in an answer?</strong></p>
+    <p>If you get an error message, check your <strong>indentation</strong> - make sure the new code lines up with the line before it.</p>
     <br>
     <p>We can improve the quiz game by checking <strong>if the response given is the same as the answer in the file</strong>.</p>
-    <p>Click on <strong>line 12</strong>, which is after we have asked for a response, and type the code below - make sure the new code lines up with with code above it.</p>
+    <p>Make a new line after line 10 and type the code below - make sure the new code lines up with with code above it.</p>
     <pre>  if response == answer:
     print("Correct, well done!")</pre><br>
     <p>Test it out:</p>
@@ -95,7 +96,7 @@
     print(" ")</pre><br>
     <p>Try adding this to your code - where should you put it? What do you want to put in the brackets?</p>
     <p class=debugging><strong>Remember to keep testing your code to check for errors!</strong></p>
-    <p>If you added more quiz questions to the previous program, copy and paste them into this new one, then save your code.</p>
+    <p><em>To view the full code example, <a href="https://trinket.io/python3/e9683bad55" target="_blank">click here</a>.</em></p>
     <p><em>To skip the second project, and see the next step ideas, <a href="#extensions">click here</a>.</em></p>
     <br>
   </div>
@@ -104,18 +105,75 @@
     <h3>Introduction to the Globe at Night Data</h3>
     <p>...</p>
     <p>Including discussion on what could change the data (in addition to light pollution)</p>
+    <p>Making the data accessible - original, stripped down for Trinket, python function (compare to their quiz code)</p>
     <br>
   </div>
 
   <div id="averages" class="left">
     <h3>Working out the Average</h3>
-    <p>...</p>
+    <p>Run this code buy clicking the <strong>></strong> button on the top.</p>
+    <iframe src="https://trinket.io/embed/python3/162518f615?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p><em>You can access this directly on the Trinket website by <a href="https://trinket.io/python3/8e2fddee77" target="_blank">clicking here</a>.</em></p>
+    <p>When you run the code, you get <strong>loads of numbers...</strong> not very easy to work with!</p>
+    <br>
+    <p>To make the data easier to understand, we're going to work out the <strong>average limiting magnitude</strong> per month.</p>
+    <p>You might have learnt about three types of averages at school, the <strong>median, mode and mean</strong>. We're going to use the <strong>mean</strong> to work out the average magnitude per month.</p>
+    <p>To do this, we add up all of the numbers, then divide by the number of numbers! To find out more, check out <a href="https://www.bbc.co.uk/bitesize/topics/zm49q6f/articles/z99jpbk" target="_blank">this BBC Bitesize page</a>.</p>
+    <p>The Python way of doing this is here:</p>
+    <pre>averageMarch = sum(data.Mar)/len(data.Mar)
+print(averageMarch)</pre>
+    <br>
+    <ul>
+      <li>Create a variable called <code>averageMarch</code></li>
+      <li><code>sum</code> (add up) all the numbers from <code>data.Mar</code> (March)</li>
+      <li>Divide this by the <code>len</code> (length of, i.e. the number of numbers) of <code>data.Mar</code></li>
+      <li><code>print()</code> this value, so we can see it on the screen</li>
+    </ul>
+    <br>
+    <p>Add this new code to your program, underneath everything that's already there, and test it out!</p>
+    <p class=debugging><strong>Can you change it to get the average of a different month instead?</strong></p>
+    <p>Don't worry about doing all the months - we can use a programming trick to do them all at once!</p>
+    <br>
+    <p>We can use a <strong>loop</strong> to tell the program to do all the months at once, without having to type out all the lines again!</p>
+    <p>We're going to use the same kind of loop as the one we used to read all the quiz questions - a <strong>for loop</strong>.</p>
+    <p>Replace the two lines of code you used to get the average with this:</p>
+    <pre>averages = []
+for month in data.list:
+  averages.append(sum(month)/len(month))
+print(averages)</pre>
+    <br>
+    <p>This does the same thing, but it does it for every month in the data, and adds them to a new <em>list</em> called <code>averages</code>.</p>
+    <br>
+    <p>You just have one number now for each month, compared to all of the ones you had before... much easier to work with!</p>
+    <p class=debugging><strong>Try changing the variables to see what numbers you get.</strong></p>
+    <ul>
+      <li>Change which year's data you want to look at.</li>
+      <li>Change which constellation you care about.<br><em>You will get error messages for this! See below for how to fix it, or stick with <code>"all"</code> for now.</em></li>
+      <li>Change whether you're interested in the Northern or Southern Hemisphere.</li>
+    </ul>
+    <p class=debugging><strong>If you choose a specific contellation, you will get no data for some months, because they can only be seen in the sky at certain times of the year</strong>.<br>This means that the program will try to create an average from nothing, and will get confused!<br>If you want to fix this error, <a href="divide-by-zero.html" target="_blank">follow the instructions here</a>.</p>
     <br>
   </div>
 
   <div id="graphs" class="left">
     <h3>Graphs!</h3>
-    <p>...</p>
+    <p>The averages are easier to compare than all the numbers we had before, but a graph is even better!</p>
+    <p>Add this code to your program, underneath everything you have done so far:</p>
+    <pre>plt.plot(months, averages, color="red")
+plt.show()</pre>
+    <br>
+    <p><strong>What do you want to visualise?</strong></p>
+    <p>The graph will show you the averages using the variables you chose before.</p>
+    <ul>
+      <li>Change your variables again to see how the graph changes.</li>
+      <li>Can you change the colour of the line?</li>
+    </ul>
+    <p>You can improve your graphs by adding labels, to explain what you are showing, and by adding more than one line... think about what interests you - what questions do you want to ask?</p>
+    <p>Use the extension links below to help you add extra things to your graph, or go back to your quiz from earlier and add extra features to that instead!</p>
+    <p>e.g.</p>
+    <img src=".\images\example-comparison-graph.png" alt="Graph of limiting magnitude by month, showing labels on axis and three lines" width="600px" height="auto">
+    <p>This shows that people could see the stars more clearly in February & August than in May & September... but I don't know why!</p>
+    <p>Graphs don't give us the whole picture, but are interesting and help us to ask questions. Scientists could look at this graph and decide to do some research - to look more closely at the data - to see what the difference is between these months.</p>
     <br>
   </div>
 
@@ -135,6 +193,7 @@
   <nav class="links bg_green">
     <a href="more-lines.html" target="_blank">add extra data to the same graph</a>
     <a href="labels.html" target="_blank">label your graph</a>
+    <a href="divide-by-zero.html" target="_blank">stop the divide by zero error</a>
   </nav>
 
   <footer class="links">
