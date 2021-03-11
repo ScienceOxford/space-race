@@ -41,18 +41,60 @@
   <div id="quiz-starter" class="left">
     <h3>Beginning the Quiz</h3>
     <p>Run this code buy clicking the <strong>></strong> button on the top.</p>
-    <p>Embed Trinket snippet here...</p>
-    <p>You can access this directly by clicking here...</p>
-    <p class=debugging>Can you edit the code to show all the answers instead of all the questions?</p>
-    <p>Explanation of what the code does...</p>
-    <p>Explanation of how the quiz questions are formatted...</p>
-    <p class=debugging>Can you add some of your own questions to the quiz? Check that the code still works if you print all the questions, and if you print all the answers!</p>
+    <iframe src="https://trinket.io/embed/python3/8e2fddee77" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p><em>You can access this directly on the Trinket website by <a href="https://trinket.io/python3/8e2fddee77" target="_blank">clicking here</a>.</em></p>
+    <p class=debugging><strong>Can you edit the code to show the answers instead of the questions?</strong></p>
+    <br>
+    <h5>So how does this work?</h5>
+    <img src=".\images\starter-code-info.PNG" alt="Screenshot of code from editor above, described below" width="600px" height="auto">
+    <ol type="A">
+      <li>We tell the program to open the text file with the quiz inside.</li>
+      <li>It looks at <strong>each line</strong> within that file, one at a time.</li>
+      <li>On the line, when it finds a dash <strong>-</strong> symbol, it splits the line in half - this is how we seperate the questions from the answers!</li>
+      <li>It labels the first part <strong>question</strong>, and the second part <strong>answer</strong>, using <em>variables</em>.<br>Note that Python starts counting from <code>0</code> instead of from <code>1</code>, so <code>line[0]</code> is the first half of the line!</li>
+      <li>It removes extra spaces from the end of each part.</li>
+      <li>We tell it to <strong>print</strong> all the questions - this is why we see them in the <strong>Results</strong> part of the editor.</li>
+      <li>Finally, because it doesn't need to look at the quiz any more, we tell it to close it.</li>
+    </ol>
+    <br>
+    <p class=debugging><strong>Can you add some of your own questions to the quiz?</strong><br>Check that the code still works if you print all the questions, and if you print all the answers!</p>
+    <ul>
+      <li>Look in the <em>quiz.txt</em> file to see what the questions and answers look like.</li>
+      <li>The dash <strong>-</strong> symbol before the answer is how the program knows to split up the line.</li>
+    <ul>
     <br>
   </div>
 
   <div id="quiz-responses" class="left">
     <h3>Inputting Answers</h3>
-    <p>...</p>
+    <p>We are going to use a new Trinket for this next part so, before moving on, <strong>save your code from before</strong>, especially if you added some extra quiz questions!</p>
+    <p>Run this code buy clicking the <strong>></strong> button on the top.</p>
+    <iframe src="https://trinket.io/embed/python3/e9683bad55?showInstructions=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+    <p><em>You can access this directly on the Trinket website by <a href="https://trinket.io/python3/e9683bad55" target="_blank">clicking here</a>.</em></p>
+    <p class=debugging><strong>Test this code - what happens when you type in an answer?</strong></p>
+    <br>
+    <p>We can improve the quiz game by checking <strong>if the response given is the same as the answer in the file</strong>.</p>
+    <p>Click on <strong>line 12</strong>, which is after we have asked for a response, and type the code below - make sure the new code lines up with with code above it.</p>
+    <pre>  if response == answer:
+    print("Correct, well done!")</pre><br>
+    <p>Test it out:</p>
+    <ul>
+      <li>Does it work without error messages?</li>
+      <li>What happens if you type the answer correctly?</li>
+      <li>What happens if you type the answer incorrectly?</li>
+      <li>Try changing the text in the brackets, then test it again!</li>
+    </ul>
+    <p>If you get an error:</p>
+    <ul>
+      <li>Check your <strong>indentation</strong>.</li>
+      <li>Check that you have <strong>two equals signs <code>==</code></strong> between response and answer - this means 'is it equal to?'</li>
+    </ul>
+    <p>You can expand this code further by getting something different to happen if the answer is not correct.</p>
+    <pre>  else:
+    print(" ")</pre><br>
+    <p>Try adding this to your code - where should you put it?</p>
+    <p class=debugging><strong>Remember to keep testing your code to check for errors!</strong></p>
+    <p>If you added more quiz questions to the previous program, copy and paste them into this new one, then save your code.</p>
     <br>
   </div>
 
