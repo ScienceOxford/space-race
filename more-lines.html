@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Space Race</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Add Extra Data to the Same Graph</h1>
+    <br>
+  </header>
+
+  <div id="intro" class="left">
+    <h3>What do you want to investigate?</h3>
+    <p>If you want to compare two different sets of data, for example 2020 vs 2017, you could put two lines next to each other on your graph.</p>
+    <p>This involves lots of copy-and-pasting of your code, so can get confusing very fast! Be patient and look at your code carefully to make sure you find the correct parts.</p>
+    <br>
+  </div>
+
+  <div id="copy" class="left">
+    <h3>Which parts of the code create the graph?</h3>
+    <p>The first step is identifying which bits of your code will need repeating - which parts look at the data and create the graph?</p>
+    <pre>year = "2020.txt"
+stars = "all"
+location = "all"
+data.globeData(year, stars, location)
+averages = []
+for month in data.list:
+  averages.append(sum(month)/len(month))
+print(averages)
+plt.plot(months, averages, color="red")</pre>
+    <br>
+    <p>Your code will look something like the example above.</p>
+    <ul>
+      <li>You choose your variables.</li>
+      <li>You access the data.</li>
+      <li>You make a list to fill with the averages of this chosen data - <strong>this is what you are plotting on your graph</strong>.</li>
+      <li>You print the averages (we don't actually need this line any more, so you could delete it!)</li>
+      <li>Lastly, you plot this line on your graph, in the colour red.</li>
+    </ul>
+    <br>
+    <p>All of this information is important, so copy all of these lines, and past them underneath - above any other code you have added at the end of your program!</p>
+    <br>
+  </div>
+
+  <div id="edit" class="left">
+    <h3>Editing your pasted code</h3>
+    <p>Now you can decide what you want your second line to show, and make a few changes to the second set of code.</p>
+    <ul>
+      <li>Change your variables, e.g. which year you want to look at.</li>
+      <li>Change the name of the averages list - <strong>we don't want the program to rewrite the averages data from before, because we still want that on the graph as well!</strong> - call it e.g. <code>averages2</code>.</li>
+      <li>Inside your for loop, change <code>averages</code> to <code>averages2</code>.</li>
+      <li>Change the last line, which plots the line - change <code>averages</code> to <code>averages2</code>, and change the colour.</li>
+    </ul>
+    <p class=debugging>This can be very confusing, as all of the code looks very similar. Take it slowly, keep checking for errors, and don't panic - we can help you if you get stuck!</p>
+    <br>
+    <p>Look at this example, choosing data from 2020 in red and 2017 in blue:</p>
+    <pre>year = "2020.txt"
+stars = "all"
+location = "all"
+data.globeData(year, stars, location)
+averages = []
+for month in data.list:
+  averages.append(sum(month)/len(month))
+plt.plot(months, averages, color="red")
+
+year = "2017.txt"
+stars = "all"
+location = "all"
+data.globeData(year, stars, location)
+averages2017 = []
+for month in data.list:
+  averages2017.append(sum(month)/len(month))
+plt.plot(months, averages2017, color="blue")
+
+plt.show()</pre>
+  <br>
+  </div>
+
+  <div id="debugging" class="left">
+    <h3>Debugging tips</h3>
+    <ul>
+      <li>Only add one new line at once! It's really difficult to debug lots of things at the same time, so get two lines working before adding a third.</li>
+      <li>Check that you renamed <code>averages</code> in all <strong>three</strong> places.</li>
+      <li>Check that each line is a different colour, so you can tell them apart.</li>
+      <li>Make sure <code>plt.show()</code> is right at the very end.</li>
+    </ul>
+    <br>
+  </div>
+
+  <nav class="links bg_green">
+    <a href="globe.html#extensions" target="_blank">Go Back</a>
+  </nav>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/space-race/" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>
