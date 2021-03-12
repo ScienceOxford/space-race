@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Space Race</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Add Labels to your Graph</h1>
+    <br>
+  </header>
+
+  <div id="intro" class="left">
+    <h3>Why add labels?</h3>
+    <p>It can be difficult to work out what is happening on a graph, so adding labels can help people to understand what you want to show them.</p>
+    <p>You can stop <em>misconceptions</em> by explaining what your graph shows, and if there are any unknowns, so that other people do not come to the wrong conclusion!</p>
+    <br>
+  </div>
+
+  <div id="title" class="left">
+    <h3>Adding a title</h3>
+    <p>Giving your graph a title is a good start!</p>
+    <p>Scroll down to the bottom of your code, and make a new line <strong>before</strong> <code>plt.show()</code>. Add this code in there, and edit it to change your title!</p>
+    <pre>plt.title("This is the title of my graph")</pre>
+    <br>
+    <p>Did it work? Make sure your new title show up at the top of your graph!</p>
+    <br>
+  </div>
+
+  <div id="axes" class="left">
+    <h3>Labelling your axes</h3>
+    <p>Your graph has two <strong>axes</strong> - the <strong>x-axis</strong> is along the bottom (your months) and the <strong>y-axis</strong> is up the side (your averages).</p>
+    <p>Use these two lines of code to put labels on each of these axes (put them before <code>plt.show()</code>).</p>
+    <pre>plt.xlabel("x-axis label")
+plt.ylabel("y-axis label")</pre>
+    <br>
+  </div>
+
+  <div id="code" class="left">
+    <h3>Labelling the line</h3>
+    <p>You can also label the line itself, which can be useful if you put more than one line on your graph!</p>
+    <p>To do this, you need to edit the line of code which created your graph, and also add a new line of code at the bottom.</p>
+    <p>Find the line of code you added earlier: <code>plt.plot(months, averages, color="red")</code></p>
+    <p>You can add an extra <em>argument</em> inside the brackets to give it a label:</p>
+    <pre>plt.plot(months, averages, color="red", label="this is a label!")</pre>
+    <br>
+    <p>To make this label show up, you also need to add a new line of code at the bottom (before <code>plt.show()</code>):</p>
+    <pre>plt.legend()</pre>
+    <br>
+    <p>Test it out and make sure you don't get any error messages!</p>
+  </div>
+
+  <nav class="links bg_green">
+    <a href="globe.html#extensions" target="_blank">Go Back</a>
+  </nav>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/space-race/" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>
