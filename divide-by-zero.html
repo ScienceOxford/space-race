@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Game On!</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Stop the Divide by Zero Error</h1>
+    <br>
+  </header>
+
+  <div id="intro" class="left">
+    <h3>Why do we get this error?</h3>
+    <p>Most constellations can only be seen in the sky at certain times of the year.</p>
+    <p>So if you choose to analyse the observations of a specific constellation, such as Orion, there won't be any data available for some of the months.</p>
+    <p>To work out our average, we divided by the number of numbers. <a href="https://www.mathsisfun.com/numbers/dividing-by-zero.html" target="_blank">Dividing by zero doesn't work</a>, so Python will get confused and give you an error message!</p>
+    <br>
+  </div>
+
+  <div id="code" class="left">
+    <h3>Get the program to check before dividing!</h3>
+    <p>We can fix the error by <strong>getting the program to check</strong> whether there are any data for a month before trying to work out the average of it.</p>
+    <p>To do this, start an <strong>if statement</strong>, telling it to check if the length of the month is larger than zero.</p>
+    <pre>if month in data.list > 0:</pre>
+    <br>
+    <p>Inside this if statement, you can put your original code to find the average.</p>
+    <p>Add an <strong>else</strong> underneath, to tell it not to do the calculation if it can't do it - we can ask it to put a <code>0</code> in the list instead.</p>
+    <pre>else:
+  averages.append(0)</pre>
+    <br>
+    <p>Test this code and check for errors - remember that this should <strong>replace</strong> your current code to get the average, as we giving the program some extra instructions to do before it works out the average.</p>
+    <p>Try it out by changing the <code>stars</code> variable to a single constellation - does it work out the averages without giving you an error message?</p>
+    <br>
+  </div>
+
+  <div id="code" class="left">
+    <h3>The new code in full</h3>
+    <p>If your code isn't working the way you expect, compare it to the example below.</p>
+    <p>Check your <strong>indentation</strong> and look for spelling mistakes as well!</p>
+    <pre>for month in data.list:
+  if len(month) > 0:
+    averages.append(sum(month)/len(month))
+  else:
+    averages.append(0)
+print(averages)</pre>
+  <br>
+  </div>
+
+  <nav class="links bg_green">
+    <a href="globe.html#extensions" target="_blank">Go Back</a>
+  </nav>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/game-on" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>
