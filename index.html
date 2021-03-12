@@ -76,8 +76,8 @@
     <br>
     <p>We can improve the quiz game by checking <strong>if the response given is the same as the answer in the file</strong>.</p>
     <p>Make a new line after line 10 and type the code below - make sure the new code lines up with with code above it.</p>
-    <pre>  if response == answer:
-    print("Correct, well done!")</pre><br>
+    <pre>if response == answer:
+  print("Correct, well done!")</pre><br>
     <p>Test it out:</p>
     <ul>
       <li>Does it work without error messages?</li>
@@ -92,8 +92,8 @@
     </ul>
     <br>
     <p>You can expand this code further by getting something different to happen if the answer is not correct.</p>
-    <pre>  else:
-    print(" ")</pre><br>
+    <pre>else:
+  print(" ")</pre><br>
     <p>Try adding this to your code - where should you put it? What do you want to put in the brackets?</p>
     <p class=debugging><strong>Remember to keep testing your code to check for errors!</strong></p>
     <p><em>To view the full code example, <a href="https://trinket.io/python3/e9683bad55" target="_blank">click here</a>.</em></p>
@@ -115,11 +115,12 @@
     <iframe src="https://trinket.io/embed/python3/162518f615?showInstructions=true" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
     <p><em>You can access this directly on the Trinket website by <a href="https://trinket.io/python3/8e2fddee77" target="_blank">clicking here</a>.</em></p>
     <p>When you run the code, you get <strong>loads of numbers...</strong> not very easy to work with!</p>
+    <p><em>Note - it will take longer to show the results than with your quiz game - this is because there is a lot more data for the program to work through, so the loop takes longer to get to the end of the file!</em></p>
     <br>
     <p>To make the data easier to understand, we're going to work out the <strong>average limiting magnitude</strong> per month.</p>
     <p>You might have learnt about three types of averages at school, the <strong>median, mode and mean</strong>. We're going to use the <strong>mean</strong> to work out the average magnitude per month.</p>
     <p>To do this, we add up all of the numbers, then divide by the number of numbers! To find out more, check out <a href="https://www.bbc.co.uk/bitesize/topics/zm49q6f/articles/z99jpbk" target="_blank">this BBC Bitesize page</a>.</p>
-    <p>The Python way of doing this is here:</p>
+    <p>The Python way of writing this is:</p>
     <pre>averageMarch = sum(data.Mar)/len(data.Mar)
 print(averageMarch)</pre>
     <br>
@@ -145,13 +146,13 @@ print(averages)</pre>
     <p>This does the same thing, but it does it for every month in the data, and adds them to a new <em>list</em> called <code>averages</code>.</p>
     <br>
     <p>You just have one number now for each month, compared to all of the ones you had before... much easier to work with!</p>
-    <p class=debugging><strong>Try changing the variables to see what numbers you get.</strong></p>
+    <p class=debugging><strong>Try changing the <code>year</code>, <code>stars</code> and <code>location</code> variables to see what numbers you get.</strong></p>
     <ul>
       <li>Change which year's data you want to look at.</li>
       <li>Change which constellation you care about.<br><em>You will get error messages for this! See below for how to fix it, or stick with <code>"all"</code> for now.</em></li>
       <li>Change whether you're interested in the Northern or Southern Hemisphere.</li>
     </ul>
-    <p class=debugging><strong>If you choose a specific contellation, you will get no data for some months, because they can only be seen in the sky at certain times of the year</strong>.<br>This means that the program will try to create an average from nothing, and will get confused!<br>If you want to fix this error, <a href="divide-by-zero.html" target="_blank">follow the instructions here</a>.</p>
+    <p class=debugging><strong>If you choose a specific constellation, such as Orion, they can only be seen in the sky at certain times of the year. This means that for some months, there will be no data for this constellation.</strong><br>This means that the program will try to create an average from nothing, and will get confused!<br>If you want to fix this error, <a href="divide-by-zero.html" target="_blank">follow the instructions here</a>, or switch back to <code>"all"</code> and change a different variable instead.</p>
     <br>
   </div>
 
@@ -168,20 +169,26 @@ plt.show()</pre>
       <li>Change your variables again to see how the graph changes.</li>
       <li>Can you change the colour of the line?</li>
     </ul>
-    <p>You can improve your graphs by adding labels, to explain what you are showing, and by adding more than one line... think about what interests you - what questions do you want to ask?</p>
+    <p>You can improve your graphs by adding labels, to explain what you are showing, and by adding more than one line to compare them.</p>
+    <p><strong>Think about what interests you - what questions do you want to ask?</strong></p>
     <p>Use the extension links below to help you add extra things to your graph, or go back to your quiz from earlier and add extra features to that instead!</p>
-    <p>e.g.</p>
+    <br>
+    <h5>Example Graph with Questions!</h5>
     <img src=".\images\example-comparison-graph.png" alt="Graph of limiting magnitude by month, showing labels on axis and three lines" width="600px" height="auto">
-    <p>This shows that people could see the stars more clearly in February & August than in May & September... but I don't know why!</p>
-    <p>Graphs don't give us the whole picture, but are interesting and help us to ask questions. Scientists could look at this graph and decide to do some research - to look more closely at the data - to see what the difference is between these months.</p>
+    <p>I chose to compare the average magnitude of the Northern & Southern hemispheres, as well as the Equator (points near the middle of the globe!).</p>
+    <p>I put labels on my graph so that you can see which colour is which.</p>
+    <p>I notice that the average magnitude is lowest in May and September, and highest in February and August - this could mean that people could see the sky more clearly in February and August than at other times of the year.</p>
+    <p>Why could this be? And is the difference in numbers big enough to be important? My graphs doesn't give the whole picture.</p>
+    <p>A research scientist could look at this graph and decide to look more closely at the data to see if there is anything different about these months, or decide to do more research!</p>
     <br>
   </div>
 
   <div id="extensions" class="left">
     <h3>What next?</h3>
     <p>A few ideas of things to add to your quiz or your graphs are below - or ask us for help to implement your own ideas!</p>
-    <p>Want to add things to your quiz game? Use the blue links.</p>
-    <p>What to add things to your graphs? Use the green links.</p>
+    <p style="background-color:rgb(0, 133, 202)"><strong>Want to add things to your quiz game? Use the blue links.</strong></p>
+    <p style="background-color:rgb(196, 214, 0)"><strong>Want to add things to your graphs? Use the green links.</strong></p>
+    <br>
   </div>
 
   <nav class="links bg_blue">
